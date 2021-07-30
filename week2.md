@@ -1,1 +1,34 @@
 # The Journey Begins
+
+### What is Foundations of Algorithms about?
+
+It's about algorithms (duh). We study efficient programs that can process mass amounts of data.
+
+It's also about C, a programming language that is more demanding than Python. C was invented 49 years ago, so that means it does a lot less for the programmer. You won't have access to dictionaries or tuples by default. A five minute python script can take an hour to rewrite in C.
+![](media/week2/1971.jpg)
+*What else was happening while C was invented*
+
+But C is still one of the most popular languages in the world. Unlike Python, C allows you to directly access the computer's memory and hardware interfaces. It's also usually 100x faster than Python. It's like driving an F1 racecar vs a sedan, the sedan is a lot easier to drive and a lot more comfortable, but sometimes you need control and speed. Some of the most important software in the world is written in C, here are some examples: Python, Windows and Tesla Autopilot.
+
+![](media/week2/tesla-roadster.jpg)
+*The Tesla roadster*
+
+### Your Journey with C
+
+Just in case I haven't fully convinced you to learn C yet, C is an important part of your computing degree. You will use C to write some really cool software in Design of Algorithms (COMP20007) and Models of Computation (COMP30026). So the best advice I can give you is to learn C very well now, rather than suffering in this subject and having to learn it later.
+
+**Warning:** As we delve deeper into C (especially when we get into memory manipulation), we will encounter errors with no messages to help us. Because C is a bare-bones language, it does not have good error handling. But do not worry. With some new debugging tools, we will be able to squash all of our errors.
+
+### A basic C program
+
+        int main(int argc, char *argv[]) {
+                return 0;
+        }
+
+Every C program has a main function like above. All function calls are made inside the main function (or as a result of some function that main calls).
+
+When we run a C program, the computer will look for a function called main, and pass in two parameters... (argc and argv, more on that in a later week)
+
+### Types
+The ```int``` and ```char``` in the code above are types. All variables have a type associated with it that defines what kind of data it is.
+
