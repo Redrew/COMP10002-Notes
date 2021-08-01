@@ -1,23 +1,5 @@
 # The Journey Begins
 
-### What is Foundations of Algorithms about?
-
-It's about algorithms (duh). We study efficient programs that can process mass amounts of data.
-
-It's also about C, a programming language that is more demanding than Python. C was invented 49 years ago, so that means it does a lot less for the programmer. You won't have access to dictionaries or tuples by default. A five minute python script can take an hour to rewrite in C.
-![](media/week2/1971.jpg)
-*What else was happening while C was invented*
-
-But C is still one of the most popular languages in the world. Unlike Python, C allows you to directly access the computer's memory and hardware interfaces. It's also usually 100x faster than Python. It's like driving an F1 racecar vs a sedan, the sedan is a lot easier to drive and a lot more comfortable, but sometimes you need control and speed. Some of the most important software in the world is written in C, here are some examples: Python, Windows and Tesla Autopilot.
-
-![](media/week2/tesla-roadster.jpg)
-*The Tesla roadster*
-
-### Your Journey with C
-
-Just in case I haven't fully convinced you to learn C yet, C is an important part of your computing degree. You will use C to write some really cool software in Design of Algorithms (COMP20007) and Models of Computation (COMP30026). So the best advice I can give you is to learn C very well now, rather than suffering in this subject and having to learn it later.
-
-**Warning:** As we delve deeper into C (especially when we get into memory manipulation), we will encounter errors with no messages to help us. Because C is a bare-bones language, it does not have good error handling. But do not worry. With some new debugging tools, we will be able to squash all of our errors.
 
 ### A basic C program
 
@@ -30,5 +12,57 @@ Every C program has a main function like above. All function calls are made insi
 When we run a C program, the computer will look for a function called main, and pass in two parameters... (argc and argv, more on that in a later week)
 
 ### Types
-The ```int``` and ```char``` in the code above are types. All variables have a type associated with it that defines what kind of data it is.
+The ```int``` and ```char``` in the code above are types. All variables have a type associated with it that defines what kind of data it is. The type lets the computer know how much memory is needed to store the data and how to interpret it.
 
+Each variable's type must be declared before we can store or read value from it. This is a declaration.
+
+        int num;
+
+After the declaration we can initialise the variable with a value and perform operations on it.
+
+        int num;
+        num = 1;
+        num = num + 2;
+
+**Warning:** Initialization is important because there is no default value for variables in C. The computer can allocate memory that has values left from before, so an uninitialised variable's value may be entirely random.
+
+Declaration and initialisation can be combined.
+
+        int num = 1;
+
+Basic types in C:
+        
+```int = 3``` - integer (whole number)
+
+```float = 3.14``` - real number
+
+```double = 3.143141592653589793``` - real number (a double can represent real numbers with more precision than a float because it has double the memory size of float)
+
+```char = 'c'``` - a character (ASCII)
+
+
+### Hello World
+
+        #include <stdio.h>
+        int main(int argc, char *argv[]) {
+                printf("Hello World\n");
+                return 0;
+        }
+
+We need to import the standard input & output library (stdio) to write our hello world program. Strings are surrounded by double quotation marks ```"``` as opposed to single quotations ```'``` for characters. Printf does not print newlines by default, so you will usually need to include ```\n``` at the end of your string.
+
+### Input and Output
+Printing just static texts is not fun. C's printf can print numbers with some formating magic.
+
+        printf("This is a number: %d\n", 3);
+        printf("This is a double: %lf\n", 3.14);
+        printf("This is a double with 1 decimal place: %.1lf\n", 3.14);
+
+We can also read in input with scanf.
+
+        double placeholder;
+        printf("Give me a double: ");
+        scanf("%lf", &placeholder);
+        printf("You gave me: %.1lf\n", placeholder);
+
+```%lf``` tells scanf to expect a real number in the input. It stores the value into the double variable placeholder. ```&``` is a special operator in C, ```&placeholder``` evaluates to the memory location of placeholder, which scanf uses to place the value in the correct location. We will learn more about the ```&``` operator in later weeks.
