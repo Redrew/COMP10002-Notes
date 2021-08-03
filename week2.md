@@ -49,7 +49,10 @@ Basic types in C:
                 return 0;
         }
 
-We need to import the standard input & output library (stdio) to write our hello world program. Strings are surrounded by double quotation marks ```"``` as opposed to single quotations ```'``` for characters. Printf does not print newlines by default, so you will usually need to include ```\n``` at the end of your string.
+We need to import the standard input & output library (stdio) to write our hello world program. Printf does not print newlines by default, so you will usually need to include ```\n``` at the end of your string.
+
+### ```'``` is different from ```"```
+In C, single quotes are used for characters and double quotes are used for strings. This may be counterintuitive to programmers who came from Python.
 
 ### Input and Output
 Printing just static texts is not fun. C's printf can print numbers with some formating magic.
@@ -66,3 +69,8 @@ We can also read in input with scanf.
         printf("You gave me: %.1lf\n", placeholder);
 
 ```%lf``` tells scanf to expect a real number in the input. It stores the value into the double variable placeholder. ```&``` is a special operator in C, ```&placeholder``` evaluates to the memory location of placeholder, which scanf uses to place the value in the correct location. We will learn more about the ```&``` operator in later weeks.
+
+More on printf and scanf:
+https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm
+
+https://www.tutorialspoint.com/c_standard_library/c_function_scanf.htm
