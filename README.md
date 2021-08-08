@@ -6,6 +6,7 @@ Welcome! These are my notes for University of Melbourne's Foundations of Algorit
 The notes are organised by weeks. They are meant to accompany your weekly tutorials.
 
 <a href="week2">Week 2</a>
+<a href="week3">Week 3</a>
 
 ### About Me
 <a href="aboutme">Who is Andrew?</a>
@@ -25,6 +26,6 @@ But C is still one of the most popular languages in the world. Unlike Python, C 
 
 ### Your Journey with C
 
-Just in case I haven't fully convinced you to learn C yet, C is an important part of your computing degree. You will use C to write some really cool software in Design of Algorithms (COMP20007) and Models of Computation (COMP30026). So the best advice I can give you is to learn C very well now, rather than suffering in this subject and having to learn it later.
+Just in case I haven't fully convinced you to learn C yet, C is an important part of your computing degree. You will use C to write some really cool software in Design of Algorithms (COMP20007) and Computer Systems (COMP30023). So the best advice I can give you is to learn C very well now, rather than suffering in this subject and having to learn it later.
 
 **Warning:** As we delve deeper into C (especially when we get into memory manipulation), we will encounter errors with no messages to help us. Because C is a bare-bones language, it does not have good error handling. But do not worry. With some new debugging tools, we will be able to squash all of our errors.
