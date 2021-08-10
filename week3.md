@@ -73,6 +73,7 @@ The equivalent loop!
                         printf("Value is not 3 or 7\n)
                         break;
         }
+
 Everything you can do with a switch can be accomplished by a series of if else statements. Try to avoid switch statements.
 
 ### Define
