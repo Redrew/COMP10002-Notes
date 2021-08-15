@@ -6,7 +6,10 @@ Welcome! These are my notes for University of Melbourne's Foundations of Algorit
 The notes are organised by weeks. They are meant to accompany your weekly tutorials.
 
 <a href="week2">Week 2</a>
+
 <a href="week3">Week 3</a>
+
+<a href="week4">Week 4</a>
 
 ### About Me
 <a href="aboutme">Who is Andrew?</a>
