@@ -65,6 +65,7 @@ A C program stores local variables in memory consecutively. This section of memo
         int a = 0;
         int b = 0;
         printf("%p %p\n", &a, &b);
+
 The above code gave me ```0x7ffbffffa960``` and ```0x7ffbffffa964```. The value of the pointers will change every time I run the program because the next available address on the stack will change depending on the other programs running on my computer. What will not change is the relative difference between the pointers. ```int``` variables have a size of 4 bytes on my computer. Because local variables are assigned memory consecutively, a and b are next to each other in memory.
 
 
