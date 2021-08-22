@@ -74,3 +74,6 @@ More on printf and scanf:
 https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm
 
 https://www.tutorialspoint.com/c_standard_library/c_function_scanf.htm
+
+### Compiling
+How do we run our C program? Before any human readable program can be executed by the computer, it needs to be translated into binary instructions that our CPU hardware can understand. Compilers are programs that translates human readable code into binary. Compilers are incredible pieces of technology, many can optimize your code during translation. If it sees a shortcut that still produces the same behaviour as your code, it will take it for you. GCC and Clang are examples of a compiler. In this subject, we will be using GCC.

@@ -11,6 +11,8 @@ The notes are organised by weeks. They are meant to accompany your weekly tutori
 
 <a href="week4">Week 4</a>
 
+<a href="https://youtu.be/iihWynF6jJE">How to install GCC and VSCode</a>
+
 ### About Me
 <a href="aboutme">Who is Andrew?</a>
 
