@@ -13,6 +13,8 @@ The notes are organised by weeks. They are meant to accompany your weekly tutori
 
 <a href="week5">Week 5</a>
 
+<a href="week6">Week 6</a>
+
 <a href="https://youtu.be/TY6gXRf-L7s">How to install GCC and VSCode</a>
 
 ### About Me
