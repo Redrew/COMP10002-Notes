@@ -5,6 +5,8 @@ Welcome! These are my notes for University of Melbourne's Foundations of Algorit
 
 The notes are organised by weeks. They are meant to accompany your weekly tutorials.
 
+<a href="https://youtu.be/TY6gXRf-L7s">How to install GCC and VSCode</a>
+
 <a href="week2">Week 2</a>
 
 <a href="week3">Week 3</a>
@@ -15,7 +17,7 @@ The notes are organised by weeks. They are meant to accompany your weekly tutori
 
 <a href="week6">Week 6</a>
 
-<a href="https://youtu.be/TY6gXRf-L7s">How to install GCC and VSCode</a>
+<a href="week7">Week 7</a>
 
 ### About Me
 <a href="aboutme">Who is Andrew?</a>
