@@ -97,7 +97,8 @@ Comparison functions are helpful when you are sorting structs.
 ### Dynamic Memory
 We finally learn how to create variable sized arrays and data that can be returned from a function as a pointer without being destroyed.
 
-We use the ```malloc``` and ```free``` function from the ```stdlib.h``` library
+We do this with the ```malloc``` and ```free``` function from the ```stdlib.h``` library. malloc and free works with
+the operating system's memory management system to create persistent memory. This memory will stay until it is freed with free.
 
         #include <stdlib.h>
         #include <stdio.h>
@@ -106,4 +107,41 @@ We use the ```malloc``` and ```free``` function from the ```stdlib.h``` library
         printf("Array size: \n");
         scanf("%d", &array_size);
         double *array = (double *) malloc(sizeof(double) * array_size);
+
+        // Check we got allocated memory
+        if (array == NULL) {
+                printf("Not enough memory\n");
+                exit(1);
+        }
         
+        // Do things with array
+        ...
+
+        // Release memory
+        free(array);
+        array = NULL;
+
+Somethings we can takeaway from the example above.
+* malloc is a generic function. It takes as argument the number of bytes to be allocated, and it returns a pointer with type (void *)
+* It is up to the programmer to then assign a type to the pointer by casting ```(new_type *)``` the return value.
+* sizeof returns the byte size of primitive data types. Always use sizeof instead of hardcoding the sizes of primitives, because it can change from machine to machine
+* It is good practice to always check that malloc returns a valid address. malloc can fail if the computer is out of memory, in which case it will return a NULL pointer (which has a value of 0)
+* NULL has value of 0, default return value if malloc cannot allocate that much memory
+* Always free memory after you are done. Future assignments will check that all memory is freed after your program finishes, memory leaks are a problem in long programs/loops
+* Rule of thumb: always have one ```free``` for every ```malloc```
+* Set pointers to NULL after they are freed because they no longer point to valid memory
+
+#### Resizing arrays
+What if we need to resize our allocated memory? We can do this with ```realloc```. realloc creates a new section of memory with the new size and copies all data from the old memory block, then it frees the old memory.
+realloc
+
+        ...
+        double *array = (double *) malloc(sizeof(double) * array_size);
+        ...
+        array = realloc(array, new_array_size);
+        if (array == NULL) {
+                printf("Not enough memory\n");
+                exit(1);
+        }
+
+        free(array);
