@@ -23,6 +23,8 @@ The notes are organised by weeks. They are meant to accompany your weekly tutori
 
 <a href="week9">Week 9</a>
 
+<a href="week10">Week 10</a>
+
 ### About Me
 <a href="aboutme">Who is Andrew?</a>
 

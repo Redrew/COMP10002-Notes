@@ -9,7 +9,7 @@ The syntax for arrays are
         myArray[0] = 1; // Arrays are indexed from 0
         printf("%d\n", myArray[0]); // Prints 1
 
-Arrays are not just fixed in size, they need to have a constant size when you compile the code. That means you cannot use a number from input as the size of your array. The compiler needs to specify a constant size for the computer during compilation.
+Arrays are not just fixed in size, they need to have a constant size when you compile the code (in old versions of C, newer versions of C allows you to use an integer to specify the size). That means you cannot use a number from input as the size of your array. The compiler needs to specify a constant size for the computer during compilation.
 
 ### Arrays are pointers
 ```myArray``` in the code above is actually a memory location to the first element in the array. This is how C tracks arrays. To find the value of ```myArray[0]```, the computer retrieves the value stored at the location ```myArray```. To retrieve the value of ```myArray[5]```, the computer retrieves the value at ```myArray``` shifted to the end by 5 ```int``` size bytes.
