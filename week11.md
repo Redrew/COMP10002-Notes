@@ -3,8 +3,9 @@ Data is represented as 1 and 0 in computers. This is done with transistor device
 
 Binary numbers (base 2) are very similar to decimals (base 10)
 
-Decimals (base 10): 3089 = 3 * 1000 + 0 * 100 + 8 * 10 + 9 * 1
-Binary (base 2): 1011 = 1 * 2^3 + 0 * 2^2 + 1 * 2^1 + 1 * 2^0
+* Decimals (base 10): 3089 = 3 * 1000 + 0 * 100 + 8 * 10 + 9 * 1
+* Binary (base 2): 1011 = 1 * 2^3 + 0 * 2^2 + 1 * 2^1 + 1 * 2^0
+* 12 (base 10) = 8 + 4 = 1010 (base 2)
 
 Note that n^0 = 1 for any n.
 
@@ -16,6 +17,18 @@ Note that n^0 = 1 for any n.
 * x0xx + x0xx + 1xx = x1xx
 * 1xxx + 0xxx = 1xxx
 * Together: 1110
+
+### Hexadecimals
+Hexadecimals is a number in base 16. The digits in hexadecimal are 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+
+* 14 (base 10) = E (base 16)
+* 17 (base 10) = F1 (base 16)
+
+Converting between binary and hexadecimal is actually really convenient, because 16 = 2^4, each hexadecimal digit represents 4 bits in binary
+
+* 1111 (15 in base 10) = F (base 16)
+* 0001 1111 (31 in base 10) = 1F (base 16)
+* 1010 0001 1111 (2591 in base 10) = A1F (base 16)
 
 ### Twos Complement
 How do we represent negative numbers? One method is to dedicate a bit at the start of the number to indicate the sign of the number (0 - positive, 1 - negative). 
@@ -37,7 +50,30 @@ There is only one representation of zero: 0000, and we can add negative and posi
 
 1001 (-7) + 0010 (2) = 1011 (-5)
 
+#### Converting between positive to negative
+There is a trick to calculate the twos complement of -n if you already know the binary of n
+1. Flip all the bits
+2. Add 1
+
+Example for a 4 bit binary:
+* 5 = 0101
+* -5 = 1010 + 0001 = 1011 (-8 + 2 + 1 = -5)
+
+The same holds for converting a negative number positive
+* -3 = 1101
+* 3 = 0010 + 0001 = 0011
+
+##### Proof:
+Flipping all the bits of XXXX is equivalent to 1111 - XXXX
+
+Flip(XXXX) + 0001 = 1111 - XXXX + 0001 = -1 - n + 1 = -n
+
 <!-- ### Floating point numbers
+We can also represent fractional numbers in binary, in the same way decimals represent fractional numbers
+
+* Base 10: 0.11 = 1 / 10 + 1 / 100
+* Base 2: 0.101 = 1 / 2 + 0 / 4 + 1 / 8 = 0.625 (base 10)
+
 TBW -->
 
 ### Files
